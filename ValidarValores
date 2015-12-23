@@ -1,0 +1,29 @@
+package validarvalores;
+import java.util.Scanner;
+import java.util.Locale;
+/**
+ *
+ * @author Cicero
+ */
+public class ValidarValores {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner ler = new Scanner(System.in);
+        ler.useLocale(Locale.ENGLISH);
+        int a,b,c,d;
+        a=ler.nextInt();
+        b=ler.nextInt();
+        c=ler.nextInt();
+        d=ler.nextInt();
+        if(b>c&&d>a&&c+d>b+a&&c>0&&d>0&&a%2==0){
+            System.out.printf("Valores aceitos");
+        }else{
+        System.out.printf("Valores nao aceitos.");
+        }
+    }
+    
+}
