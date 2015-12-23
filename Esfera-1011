@@ -1,0 +1,27 @@
+package esfera;
+import java.util.Scanner;
+import java.util.Locale;
+import java.math.*;
+/**
+ *
+ * @author Cicero
+ */
+public class Esfera {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner ler = new Scanner(System.in);
+        ler.useLocale(Locale.ENGLISH);
+        long raio;
+        double pi=3.14159;
+        raio= ler.nextLong();
+        double volume;
+        double cubo = Math.pow(raio, 3);
+        volume = ((4.0/3)*pi*cubo);
+        System.out.printf("VOLUME = %.3f\n",volume);
+    }
+    
+}
