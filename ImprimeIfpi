@@ -1,0 +1,27 @@
+package printifpi;
+import java.util.Scanner;
+/**
+ *
+ * @author Cicero
+ */
+public class PrintIfpi {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner ler = new Scanner(System.in);
+        int n = ler.nextInt();
+        int cont =1;
+        for(int i=1;i<=n;i++){
+            for(int j=0;j<4;j++){
+                if(cont%4==0){
+            System.out.println("IFPI");}
+                else{
+                    System.out.print(cont+" ");}
+            cont++;
+            }
+            
+        }
+    }
