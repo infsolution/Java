@@ -1,0 +1,31 @@
+package senha;
+import java.util.Scanner;
+/**
+ *
+ * @author Cicero
+ */
+public class Senha {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner ler = new Scanner(System.in);
+        String senha = "2002";
+        int cont=0;
+        String valida;
+        valida ="";
+        while(!valida.equals(senha)){
+            cont++;
+            valida =ler.next();
+            if(valida.equals(senha)){
+            System.out.println("Acesso permitido");
+            break;
+            }else if(!valida.equals(senha)&&cont==3){
+                System.out.println("Senha Invalida.");
+                break;
+            }else{System.out.println("Senha Invalida.");}
+        }
+    }
+    
