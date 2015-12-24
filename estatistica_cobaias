@@ -1,0 +1,62 @@
+package cobaias;
+import java.util.Scanner;
+import java.util.Locale;
+/**
+ *
+ * @author Cicero
+ */
+public class Cobaias {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner ler = new Scanner(System.in);
+        //ler.useLocale(Locale.ENGLISH);
+        int cases = entrada();
+        String dados[];
+        String c,r,s;
+        int total=0;
+        int tts=0,ttr=0,ttc=0;
+        double pts=0.0,ptr=0.0,ptc=0.0;
+        
+        for(int i = 1;i<=cases;i++){
+           dados = ler.nextLine().split(" ");  
+           total=total+Integer.parseInt(dados[0]);
+           switch(dados[1]){
+               case "c":
+                   ttc=ttc+Integer.parseInt(dados[0]);
+                   break;
+               case "r":
+                   ttr=ttr+Integer.parseInt(dados[0]);
+                   break;
+               case "s":
+                   tts=tts+Integer.parseInt(dados[0]);
+                   break;
+           }
+         
+        }
+        double div=total;
+        ptc=(double)(ttc/div)*100;
+        ptr=(double)(ttr/div)*100;
+        pts=(double)(tts/div)*100;
+        System.out.println("Total: "+total+" Cobaias.");
+        System.out.println("Total de coelhos:"+ttc);
+        System.out.println("Total de ratos: "+ttr);
+        System.out.println("Total de sapos: "+tts);
+        System.out.printf("Percentual de coelhos: %.2f",ptc);
+        System.out.println(" %");
+        System.out.printf("Percentual de ratos: %.2f",ptr);
+        System.out.println(" %");
+        System.out.printf("Percentual de sapos: %.2f",pts);
+        System.out.println(" %");
+    }
+    public static int entrada(){
+        Scanner ler = new Scanner(System.in);
+        int ent;
+        ent= ler.nextInt();
+    return ent;
+    }
+    
+}
